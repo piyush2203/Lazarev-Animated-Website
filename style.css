@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    color:white;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    position: fixed;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding:2vw 10.4vw ;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+#nav-bottom{
+    /* background-color: black; */
+    height: 0%;
+    width: 79%;
+    position: absolute;
+    /* top: 50%; */
+    bottom: 0%;
+    border-bottom : 1px solid white;
+    transition: all ease 0.65s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0vw 19vw;
+    /* gap: 2vw; */
+    padding-left: 18.2vw; 
+}
+
+.bottom-div{
+    margin-top: 2vw;
+}
+
+.bottom-div h5{
+    /* background-color: red; */
+    margin-bottom: 0.4vw;
+    overflow: hidden;
+}
+
+.bottom-div h5 span{
+    display: inline-block;
+    font-size: 0.75vw;
+    font-weight: 600;
+    opacity: 0;
+}
+
+nav:hover #nav-bottom{
+    height: 175%;
+    bottom: -150%;
+    background-color: black;
+    
+
+}
+
+nav:hover .bottom-div h5 span{
+    opacity: 100%;
+    transition: all ease 3s;
+    cursor: pointer;
+}
+
+
+#nav-items{
+    display: flex;   
+    gap: 1.5vw;
+}
+
+#nav-items h4{
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+nav button{
+    background-color: #0DA34E;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 50px;
+    border: none;
+    font-size: 0.9vw;
+    font-weight: 600;
+    padding-left: 0.7vw;
+
+}
+
+nav button svg{
+    height:1vw;
+    margin-left: 2vw;
+
+}
+
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 h1{
+    font-weight: 900;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+    line-height: 8.5vw;
+
+}
+
+#page1 h1 svg{
+    height: 6vw;
+    width: 6vw;
+    background-color: #0DA34E;
+    border-radius: 50%;
+}
+
+#page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 5vh;
+   
+}
+
+#page-1something{
+    padding: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#page-1something h4{
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: lowercase;
+    padding: 5px 12px;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin-right: 3px;
+    margin-top: 0.3vw;
+}
+
+#page-1something h4:nth-last-child(2){
+    border: none;
+    padding: 2px;
+}
+
+#page2{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+#moving-div{
+    /* background-color: red; */
+    margin-top: 10vh;
+    position: absolute;
+    bottom: 3%;
+
+    /* best thing to wrap */
+    width: 44% ;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+    
+    
+}
+
+#moving-div .move{
+    display: inline-block;
+    animation-name: mobe;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#moving-div .move img{
+     height: 1vw;
+     margin: 0 1.2vw;
+
+}
+
+@keyframes mobe{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);   
+    }
+     
+}
+
+#blur-left{
+    height: 100%;
+    width: 20%;
+    background : linear-gradient(to left , transparent , black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#blur-right{
+    height: 100%;
+    width: 20%;
+    /* background-color: red; */
+    position: absolute;
+    background: linear-gradient(to right , transparent , black);;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
